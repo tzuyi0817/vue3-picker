@@ -2,7 +2,7 @@ import type { PickerOptions, PickData } from '../types';
 declare const _sfc_main: import("vue").DefineComponent<{
     data: {
         type: null;
-        required: true;
+        required: false;
         default: () => never[];
     };
     isShowPicker: {
@@ -28,6 +28,11 @@ declare const _sfc_main: import("vue").DefineComponent<{
         required: false;
         default: number;
     };
+    type: {
+        type: StringConstructor;
+        required: false;
+        default: string;
+    };
 }, {
     props: {
         data: PickData;
@@ -36,6 +41,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
         anchor: number | Array<number>;
         showKey?: string | string[] | undefined;
         swipeTime: number;
+        type: string;
     };
     emit: (event: "update:isShowPicker" | "cancel" | "confirm", ...args: any[]) => void;
     options: import("vue").ComputedRef<{
@@ -62,7 +68,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:isShowPicker" | "cancel" | "confirm")[], "update:isShowPicker" | "cancel" | "confirm", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     data: {
         type: null;
-        required: true;
+        required: false;
         default: () => never[];
     };
     isShowPicker: {
@@ -88,6 +94,11 @@ declare const _sfc_main: import("vue").DefineComponent<{
         required: false;
         default: number;
     };
+    type: {
+        type: StringConstructor;
+        required: false;
+        default: string;
+    };
 }>> & {
     "onUpdate:isShowPicker"?: ((...args: any[]) => any) | undefined;
     onCancel?: ((...args: any[]) => any) | undefined;
@@ -96,5 +107,6 @@ declare const _sfc_main: import("vue").DefineComponent<{
     data: any;
     options: Record<string, any>;
     swipeTime: number;
+    type: string;
 }>;
 export default _sfc_main;
