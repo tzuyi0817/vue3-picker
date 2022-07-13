@@ -7,13 +7,14 @@ declare const _sfc_main: import("vue").DefineComponent<{}, {
         version?: number | undefined;
     }>;
     currentDate: import("vue").Ref<number[]>;
+    currentTime: import("vue").Ref<number[]>;
     isShowPicker: import("vue").Ref<boolean>;
     isShowDate: import("vue").Ref<boolean>;
+    isShowTime: import("vue").Ref<boolean>;
     dataList: import("vue").Ref<{
         langType: number;
         code: string;
         original: string;
-        version: number;
     }[]>;
     options: {
         confirmColor: string;
@@ -23,9 +24,11 @@ declare const _sfc_main: import("vue").DefineComponent<{}, {
     anchor: import("vue").ComputedRef<number>;
     confirm: (value: LangType) => void;
     confirmDate: (value: Array<number>) => void;
+    confirmTime: (value: Array<number>) => void;
     cancel: () => void;
     toggle: () => void;
-    date: () => void;
+    openDate: () => void;
+    openTime: () => void;
     Picker: import("vue").DefineComponent<{
         data: {
             type: null;
